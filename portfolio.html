@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="scl project.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="port.png"> 
+    <style>
+        
+        .l{
+            cursor: pointer;
+            color: white;
+        }
+        .l:hover{
+            color: gray;
+        }
+        #cd{
+            
+            border: 1px solid rgb(12, 12, 12);
+            box-shadow: 2px 2px 20px rgb(0, 0, 0);
+        }
+        .partho{
+            display: block;
+            margin: 0 auto;
+        }
+
+        .distance{
+            
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 50%;
+            border: 1px solid;
+            
+        }
+        .card-div{
+            width: 100%; 
+        }
+        .cards{
+            
+            
+            display: flex; 
+            justify-content: space-around;
+            
+        }
+        
+        .c{
+            border: 2px solid;
+            box-shadow: 2px 2px 20px rgb(0, 0, 0);
+            width: 300px;
+            height: 300px;
+            transition: 0.8s ;
+            
+            
+        }
+        .c:hover{
+            transform: scale(1.2);
+        }
+        .animationabotme{
+            
+            position: relative;
+            animation-name: bottom-top-abotme;
+            animation-duration: 4s;
+            animation-delay: 0.5s;
+        }
+        .animationwe{
+            position: relative;
+            animation-name: bottom-top-we;
+            animation-duration: 4s;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes bottom-top-abotme{
+            from {
+                top: -500px;
+            }
+            to{
+                
+                top: 0px;
+            }
+        }
+        @keyframes bottom-top-we{
+            from {
+                
+                top: -1200px;
+            }
+            to{
+                top: 0px;
+            }
+        }
+        .hidden{
+            display: none;
+        }
+        
+
+        .card,.card-header,.card-body,.card-footer{
+            border: 0px;
+        }
+       
+    
+        
+        
+
+
+        @media only screen and (max-width: 767px){
+            .l{
+            font-size: 10pt;
+        }
+        #cd{
+            margin-top: 50%;
+        }
+            .photo{
+                width: 150px;
+                height: 150px;
+                
+                
+            }
+            
+            #specialize-div{
+                height: 250px;
+                overflow: auto;
+            }
+            
+            .cards{
+                flex-wrap: wrap;
+                
+            }
+            .c{
+                margin-top: 5px;
+            }
+        
+            .mySlides {
+    display: none;
+   
+  }
+
+  .mshit{
+    display: block;
+    
+  }
+      
+    }
+
+   
+    </style>
+</head>
+<body >
+
+    
+    
+
+        <div class="card">
+            <div class="card-header bg-info">
+    
+                <nav class="navbar navbar-expand  ">
+    
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item ">
+                            <a  class=" l nav-link "  href="#">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <p class="l nav-link  "  onclick="toggleAboutMe()">About</p>
+                        </li>
+                        <li class="nav-menu ">
+                            <p  class="l nav-link " onfocus="" onclick="toggleWorkExperience()">Work Experience</p>
+                        </li>
+                        <li class="nav-menu ">
+                            <a class="l nav-link  " href=" https://drive.google.com/file/d/1WJmh33z-5yazYywyKRE_rcj9pWhSn1vV/view?usp=drive_link">Resume</a> 
+                        </li>
+                    </ul>
+                    
+                </nav>
+    
+            </div>
+    
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        
+                            <div class="col-5 col-sm-5 ">
+                            
+                                <div style="display: flex; justify-content: center; align-items: center;height: 300px;">
+                                    <div>
+                                        <h1 style="display: block;">Hello</h1>
+                                        <h1 style="display: block;">I'm Monisha</h1>
+                                        <h5 style="display: block;"> Web  Developer</h5>
+                                        <button type="button" class="btn mt-3 bg-info ">Let's talk</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-7 col-sm-7">
+                                <div id="cd" class="card " style="height: 300px; width: 300px; margin-left: 20%;">
+                                    <img class="photo" class="justify-content-center m-auto" src="hij1.jpg" width="300px" height="300px">
+                                </div>
+                            </div>
+    
+
+    
+
+   
+                    
+                   
+
+                    <div id="aboutme" class="animationabotme hidden">
+                        <div style="margin-top: 50px; display: flex; justify-content: center;">
+                            <div class="card" style="width: 70%;">
+                                <h1 style="display: block; margin: 0 auto;">About me</h1>
+                                <img style="border-radius: 50%; display: block; margin: 0 auto; " src="hij2.jpg" width="120px" height="120px">
+                                <p style="font-weight: bold;"> 
+                                    I am a qualified and professional web developer with 2 years of experiance in database administration and website design .Strong creative and analytical skils.Team player with an eye for detail. I create efficient & innovative experiences that meet user needs and business goals.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div style="width: 100%;margin-top: 30px; display: flex; justify-content: center;">
+                        <h1 class="d-block">Specializing in</h1>
+                    </div>
+                    
+                    <div class="card" style="font-weight: bold;">
+                        
+                        I specialize in developing  websites, encompassing information systems, responsive UI/UX design, meticulous diagram creation for better understanding, integrated coding,
+                         and thorough testing in conjunction with the Software Development Life Cycle (SDLC).My passion lies in creating captivating website designs and implementing them through frontend development. 
+                         I take pride in staying up-to-date with current design trends and leveraging my creativity to produce visually appealling and user-friendly websites. Throught my career, I have developed a deep understanding of user experience (UX) and user interface(UI) principles. By putting myself in the shoes of the end-users
+                         . I believe that a well-designed website should not only look visually.
+                    </div>
+
+                    <div class="container c " id="specialize-div" 
+                    style="flex-wrap: wrap; margin-top: 20px; display: flex; justify-content: center;
+                    border: 1px solid;  box-shadow: 2px 2px 20px rgb(0, 0, 0); height: 200px; width: 500px;">
+                        
+                        <img style=" margin-top: 5px; border-radius: 50%; border: 1px solid;"  src="html.png" width="80px" height="80px">
+                        
+                        <img class="distance " src="css.png" width="80px" height="80px">
+                        <img class="distance " src="bstrp.png" width="80px" height="80px">
+                        <img class="distance " src="Js.png" width="80px" height="80px">
+                        <img class="distance " src="php.jpg" width="80px" height="80px">
+                        
+
+                    
+                    
+                </div>
+
+                <div id="we" class="animationwe hidden card-div">
+                    <h1 style="display: block; text-align: center; margin-top: 20px;">Work Experience</h1>
+                   
+                        <div class="mshit">
+                            <img class="mySlides" src="wrk9.png" style="width:100%"  height="500px" >
+                            <img class="mySlides" src="wrk8.png" style="width:100%"  height="500px" >
+                            <img class="mySlides" src="wrk7.png" style="width:100%" height="500px" >
+                            <img class="mySlides" src="wrk6.jpg" style="width:100%" height="500px">
+                            <img class="mySlides" src="wrk5.jpg" style="width:100%"  height="500px">
+                            <img class="mySlides" src="wrk4.jpg" style="width:100%"  height="500px" >
+                            <img class="mySlides" src="wrk3.jpg" style="width:100%"  height="500px" >
+                            <img class="mySlides" src="wrk2.jpg" style="width:100%" height="500px" >
+                    
+                          
+                            <button style="margin-top: 30px;" class="w3-button w3-gray w3-display-left " onclick="plusDivs(-1)">&#10094;</button>
+                            <button style="margin-top: 30px;" class="w3-button w3-gray w3-display-right " onclick="plusDivs(1)">&#10095;</button>
+                          </div>
+
+                         
+                    
+                   
+                      
+                     
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="card-footer text-center bg-info mt-4">
+            <span style="font-size: 8pt; font-weight: 500;">Created by Monisha</span> <br>
+            <span style="font-size: 8pt; font-weight: 500;">monishamon961@gmail.com </span>
+        </div>
+
+    </div>
+
+
+    <script>
+       
+
+       
+    function toggleAboutMe() {
+        var x = document.getElementById('aboutme');
+        x.classList.toggle('hidden');
+        x.scrollIntoView({behavior : 'smooth'});
+        
+    }
+
+    function toggleWorkExperience() {
+        var y = document.getElementById('we');
+        y.classList.toggle('hidden');
+        y.scrollIntoView({ behavior: 'smooth' });
+
+       
+    }
+
+
+    
+                      var slideIndex = 1;
+                      showDivs(slideIndex);
+                      
+                      function plusDivs(n) {
+                        showDivs(slideIndex += n);
+                      }
+                      
+                      function showDivs(n) {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        if (n > x.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = x.length}
+                        for (i = 0; i < x.length; i++) {
+                          x[i].style.display = "none";  
+                        }
+                        x[slideIndex-1].style.display = "block";  
+                      }
+                     
+
+   
+
+
+    </script>
+    
+</body>
+</html>
